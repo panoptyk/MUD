@@ -1,5 +1,6 @@
 import readline from "readline";
 import { ClientAPI } from "@panoptyk/client";
+import * as cmds from "./cmds";
 import { TextClient } from "./TextClient";
 
 /////////////////////////////////////////////////////////////////
@@ -40,11 +41,22 @@ let rl: readline.Interface = undefined;
 function test_and_debug(this: TextClient, args: string[]) {
   // Place any debug code here
   console.log(ClientAPI.playerAgent.inConversation)
+  this._result = "::debug::";
 }
 
+// add debug commands
 if (DEBUG) {
   tc.addCommand("d", [], test_and_debug);
+  tc.addCommand(["debug:player", "d:player"], [], cmds.debug.playerObject);
 }
+// add normal commands
+tc.addCommand("move", [1], cmds.move);
+tc.addCommand("requestConvo", [1], cmds.requestConvo);
+tc.addCommand("declineConvo", [1], cmds.declineConvo);
+tc.addCommand("leaveConvo", [0], cmds.leaveConvo);
+tc.addCommand("look", [], cmds.look);
+tc.addCommand("pickup", [], cmds.pickUp);
+tc.addCommand("drop", [], cmds.drop);
 
 function Prompt(promt: string, tc: TextClient) {
   // wait till logged in:

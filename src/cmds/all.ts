@@ -46,7 +46,7 @@ export function look(this:TextClient, at: string[]) {
       msg += agent + "\n";
     });
     msg += "\n";
-    if (player.inConversation) {
+    if (player.inConversation()) {
       msg += "In Converasation With:\n";
       player.conversation.participants.forEach(agent => {
         if (!agent.equals(player)) {

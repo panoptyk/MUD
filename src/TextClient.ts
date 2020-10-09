@@ -6,14 +6,6 @@ type ActionFunction = (args: string[]) => any;
 export class TextClient {
 
   _commands: Command[] = [];
-  // new Command("debug", [], this.debug),
-  // new Command("move", [1], this.move),
-  // new Command("requestConvo", [1], this.requestConvo),
-  // new Command("declineConvo", [1], this.declineConvo),
-  // new Command("leaveConvo", [0], this.leaveConvo),
-  // new Command("look", [], this.look),
-  // new Command("pickup", [], this.pickUp),
-  // new Command("drop", [], this.drop)
 
   _result = "";
   _viewed = true;
@@ -33,7 +25,6 @@ export class TextClient {
       return;
     }
     const split: string[] = cmd.split(" ").map(str => str.replace("_", " "));
-    console.log(split);
     const action: ActionFunction = this.getCommand(split[0], split.length - 1);
     if (action !== undefined) {
       action.call(this, split.slice(1));
