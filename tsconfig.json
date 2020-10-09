@@ -1,31 +1,9 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "target": "es6",
-      "sourceMap": true,
-      "declaration": true,
-      "declarationMap": true,
-      "removeComments": false,
-      "downlevelIteration": true,
-      "esModuleInterop": true,
-      "moduleResolution": "node",
-      "skipLibCheck": true,
-      "lib":[
-        "ES6"
-      ],
-      "baseUrl": "./",
-
-      "outDir": "./lib",
-      "paths": {
-        "@panoptyk/*": ["*", "../panoptyk-engine/packages/*/src"],
-      },
-      "typeRoots": [
-        "node_modules/@types",
-        "types"
-      ]
-    },
-    "exclude": [
-      "node_modules",
-      "**/*.spec.ts"
-    ]
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@panoptyk/*": ["*", "../panoptyk-engine/packages/*/src"],
+    }
   }
+}

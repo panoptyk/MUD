@@ -106,3 +106,6 @@ dist
 
 # VSCode
 .vscode/
+
+# Build files
+lib
