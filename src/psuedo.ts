@@ -1,3 +1,5 @@
+import { ClientAPI } from "@panoptyk/client";
+import * as Core from "@panoptyk/core";
 
 type ActionFunction = (args: string[]) => any;
 

@@ -13,6 +13,12 @@
       "lib":[
         "ES6"
       ],
+      "baseUrl": "./",
+
+      "outDir": "./lib",
+      "paths": {
+        "@panoptyk/*": ["*", "../panoptyk-engine/packages/*/src"],
+      },
       "typeRoots": [
         "node_modules/@types",
         "types"
