@@ -1,7 +1,4 @@
-import { ClientAPI } from "@panoptyk/client";
-import { Agent, Room, Item } from "@panoptyk/core";
-
-type ActionFunction = (args: string[]) => any;
+export type ActionFunction = (args: string[]) => any;
 
 export class TextClient {
 
