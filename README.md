@@ -1,2 +1,2 @@
-# text-client
-Text based client for a panoptyk game
+# Multi-User Dungeon example
+living MUD game based off the Panoptyk Engine
