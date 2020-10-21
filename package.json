@@ -1,7 +1,7 @@
 {
-  "name": "text-client",
+  "name": "panoptyk-mud",
   "version": "1.0.0",
-  "description": "Text based client for a panoptyk game",
+  "description": "Multi-User Dungeon built with Panoptyk",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,16 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panoptyk/text-client.git"
+    "url": "git+https://github.com/panoptyk/MUD.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/panoptyk/text-client/issues"
+    "url": "https://github.com/panoptyk/MUD/issues"
   },
-  "homepage": "https://github.com/panoptyk/text-client#readme",
+  "homepage": "https://github.com/panoptyk/MUD#readme",
   "dependencies": {
-    "@panoptyk/client": "*"
+    "@panoptyk/client": "2.0.0-alpha.1",
+    "@panoptyk/server": "2.0.0-alpha.1"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
