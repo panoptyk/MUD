@@ -109,3 +109,7 @@ dist
 
 # Build files
 lib
+
+# Server config files
+server/game.dat.json
+server/panoptyk-settings.json

@@ -13,7 +13,6 @@
       "lib":[
         "ES6"
       ],
-      "outDir": "./lib",
       "typeRoots": [
         "node_modules/@types",
         "types"
@@ -22,8 +21,5 @@
     "exclude": [
       "node_modules",
       "**/*.spec.ts"
-    ],
-    "include": [
-        "./src"
     ]
   }

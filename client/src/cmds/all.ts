@@ -74,6 +74,17 @@ export function move(this:TextClient, destination: string[]) {
   }
 }
 
+export function login(this:TextClient, destination: string[]) {
+  if (destination.length > 0) {
+    ClientAPI.login(destination[0], "").then( () => {
+      console.log("login successful!");
+    });
+    this._result = "Logging in as " + destination[0];
+  } else {
+    this._result = "Login name not given";
+  }
+}
+
 export function requestConvo(this:TextClient, people: string[]) {
   const player: Agent = ClientAPI.playerAgent;
   const agentsInRoom: Agent[] = player.room.occupants;
