@@ -10,6 +10,8 @@ npm install
 npm run deploy <directory_for_server>
 ```
 
+The server is run via ```node server.js``` within the directory for the deployed server files.
+
 ```npm run build``` can be used to test if the client & server compile right
 
 ```npm run deploy:only <directory_for_server>``` skips the build step, using whatever has already been built in the `dist` & `lib` folders
